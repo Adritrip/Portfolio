@@ -1,0 +1,175 @@
+/* vh-viewport height */
+/* vw-viewport width */
+
+/* css reset to standardize things krn masing2 browser suka beda default*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to right, white, rgb(52, 52, 53));
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.job-title > span {
+  font-weight: 700;
+  color: grey;
+}
+
+.job-title {
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 2px;
+  margin-bottom: 16px;
+}
+
+.container {
+  display: flex;
+  width: 800px;
+  height: 600px;
+  background: white;
+  box-shadow: 2px 4px 12px 8px rgba(49, 53, 59, 0.12);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.left {
+  width: 50%;
+  background-image: url(NYC.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.right {
+  width: 50%;
+  padding: 32px 48px;
+  overflow: auto;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 32px 48px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+}
+
+.name,
+.job-title,
+.desc,
+.contactbutton {
+  color: white;
+  text-align: center;
+}
+
+.contactbutton {
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.contactbutton:hover {
+  background: white;
+  color: #222;
+}
+
+.experience {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.experience: :last-child {
+  margin-bottom: 0px;
+}
+
+.experience-workplace > span:first-child {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.experience-workplace > span:nth-child(2) {
+  font-size: 15px;
+}
+
+.experience-workplace > span:last-child {
+  font-size: 15px;
+  /* text-transform: uppercase; biar semuanya UPPERCASE */
+  color: rgb(4, 150, 167);
+}
+
+.experience-desc {
+  margin-top: 7px;
+  font-size: 10px;
+  margin-bottom: 7px;
+}
+
+.experience-url {
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(0, 53, 160);
+}
+
+.experience-location {
+  margin-top: 7px;
+  font-size: 10px;
+  color: grey;
+}
+
+.profile-image {
+  display: none;
+}
+@media only screen and (max-width: 799px) {
+  body {
+    height: auto;
+    padding: 32px 16px;
+  }
+  .container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+  /* 
+  .left,
+  .left-container {
+    background: black
+  } */
+
+  /* .left {
+    background: url(https://www.pixelstalk.net/wp-content/uploads/2016/04/Simple-backgrounds-for-desktop-download-620x388.jpg) center / cover no-repeat;
+  } */
+
+  .profile-image {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 4px 12px 8px rgba(49, 53, 59, 0.12);
+    margin-bottom: 8px;
+  }
+}
